@@ -58,4 +58,4 @@ jobs:
     - uses: actions/upload-artifact@v3
       with:
         name: aseprite
-        path: /aseprite_test/a/build
+        path: /wufang95/aseprite_test/a/build
