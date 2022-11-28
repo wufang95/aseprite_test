@@ -58,6 +58,4 @@ jobs:
     - uses: actions/upload-artifact@v3
       with:
         name: aseprite
-        path: |
-          D:/a/aseprite/aseprite/build/bin/data
-          D:/a/aseprite/aseprite/build/bin/aseprite.exe
+        path: /aseprite_test/a/build
