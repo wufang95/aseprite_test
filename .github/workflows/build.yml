@@ -8,13 +8,15 @@ jobs:
       matrix:
         os: [windows-latest]
         build_type: [Release]
+        node-version: [10.x, 12.x, 14.x, 16.x, 18.x]
         enable_ui: [on]
         include:
           - os: windows-latest
             build_type: Release
             enable_ui: on
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
+    - name: Use Node.js ${{ matrix.node-version }}
       with:
         submodules: 'recursive'
     - name: ccache
