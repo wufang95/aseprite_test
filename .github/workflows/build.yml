@@ -16,7 +16,6 @@ jobs:
             enable_ui: on
     steps:
     - uses: actions/checkout@v3
-    - name: Use Node.js ${{ matrix.node-version }}
       with:
         submodules: 'recursive'
     - name: ccache
@@ -25,6 +24,7 @@ jobs:
       with:
         key: ${{ matrix.os }}-${{ matrix.enable_ui }}
     - uses: seanmiddleditch/gha-setup-ninja@master
+    - name: Use Node.js ${{ matrix.node-version }}
     - uses: ilammy/msvc-dev-cmd@v1
       if: runner.os == 'Windows'
     - name: Install Dependencies
